@@ -1,6 +1,9 @@
 import { Button, Card, CardContent, CardMedia, Grid, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React, { useEffect, useState } from 'react';
+import { Spinner } from 'react-bootstrap';
+
+let spinner = true;
 
 const ManageProducts = () => {
     const [services, setServices] = useState([]);
@@ -9,16 +12,16 @@ const ManageProducts = () => {
         fetch('http://localhost:5000/services')
             .then(res => res.json())
             .then(data => setServices(data))
-        // if (users) {
-        //     spinner = false;
-        // }
+        if (services) {
+            spinner = false;
+        }
     }, [])
 
-    // if (spinner) {
-    //     return <div className="d-flex justify-content-center my-3"><Spinner animation="border" variant="danger" /></div>
-    // }
+    if (spinner) {
+        return <div className="d-flex justify-content-center my-3"><Spinner animation="border" variant="danger" /></div>
+    }
     // delete an user
-    const handleDeleteUser = id => {
+    const handleDeleteOrder = id => {
         console.log(id);
         const proceed = window.confirm('Are you sure you want to delete?');
 
@@ -41,6 +44,9 @@ const ManageProducts = () => {
     }
     return (
         <Box>
+            <Typography sx={{ fontWeight: 600, m: 5 }} variant="h3">
+                Manage Products
+            </Typography>
             <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                 {
                     services.map(item => <Grid item xs={4} sm={4} md={4}>
@@ -58,7 +64,7 @@ const ManageProducts = () => {
                                 <Typography variant="body2" color="text.secondary">
                                     {item.description}
                                 </Typography>
-                                <Button sx={{ mt: 2 }} type="submit" variant="contained" onClick={() => handleDeleteUser(item._id)}>Delete Product</Button>
+                                <Button sx={{ mt: 2 }} type="submit" variant="contained" onClick={() => handleDeleteOrder(item._id)}>Delete Product</Button>
                             </CardContent>
 
                         </Card>

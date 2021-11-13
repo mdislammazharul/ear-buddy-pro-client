@@ -43,63 +43,62 @@ const PlaceOrders = (props) => {
     return (
         <>
             <Navigation />
-            <Box display="flex"
-                justifyContent="center"
-                alignItems="center">
-                <Grid>
-
-                    <Card sx={{ maxWidth: 345, mb: 5 }}>
-                        <CardMedia
-                            component="img"
-                            height="100%"
-                            image={img}
-                            alt="green iguana"
-                        />
-                        <CardContent>
-                            <Typography variant="h5" component="div">
-                                {name}
-                            </Typography>
-                            <Typography gutterBottom variant="h6" component="div">
-                                {type}
-                            </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                {description}
-                            </Typography>
-                            <Typography gutterBottom variant="h6" component="div">
-                                Price: ${price}
-                            </Typography>
-                        </CardContent>
-                        <form onSubmit={handleAddUser}>
-                            <TextField
-                                sx={{
-                                    width: '70%',
-                                    m: 3
-                                }}
-                                required
-                                id="outlined-required"
-                                label="Shipping Address"
-                                inputRef={addressRef}
+            <form onSubmit={handleAddUser}>
+                <Box display="flex"
+                    justifyContent="center"
+                    alignItems="center">
+                    <Grid item xs={12} sm={6} md={4}>
+                        <Card sx={{ maxWidth: 685, mb: 5, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                            <CardMedia
+                                component="img"
+                                height="100%"
+                                image={img}
+                                alt="green iguana"
                             />
-                            <TextField
-                                sx={{
-                                    width: '50%',
-                                    m: 3
-                                }}
-                                required
-                                id="outlined-required"
-                                label="Quantity"
-                                inputRef={quantityRef}
-                            />
-                            <Button sx={{ mb: 2 }} type="submit" variant="contained">Add Product</Button>
-                            {/* {
-                            setStatus(true)
-                        } */}
-                        </form>
-                    </Card>
+                            <CardContent>
+                                <Typography variant="h5" component="div">
+                                    {name}
+                                </Typography>
+                                <Typography gutterBottom variant="h6" component="div">
+                                    {type}
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    {description}
+                                </Typography>
+                                <Typography gutterBottom variant="h6" component="div">
+                                    Price: ${price}
+                                </Typography>
 
-                </Grid>
+                                <TextField
+                                    sx={{
+                                        width: '70%',
+                                        m: 3
+                                    }}
+                                    required
+                                    id="outlined-required"
+                                    label="Shipping Address"
+                                    inputRef={addressRef}
+                                />
+                                <TextField
+                                    sx={{
+                                        width: '70%',
+                                        m: 3
+                                    }}
+                                    required
+                                    id="outlined-required"
+                                    label="Quantity"
+                                    inputRef={quantityRef}
+                                />
+                                <Button sx={{ mb: 2 }} type="submit" variant="contained">Add Product</Button>
 
-            </Box>
+                            </CardContent>
+
+                        </Card>
+
+                    </Grid>
+
+                </Box>
+            </form>
         </>
     );
 };

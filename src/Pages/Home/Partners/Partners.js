@@ -28,7 +28,7 @@ const partners = [
 
 const Partners = () => {
     return (
-        <Box sx={{ flexGrow: 1 }}>
+        <Box id="partners" sx={{ flexGrow: 1 }}>
             <Container>
                 <Typography sx={{ fontWeight: 600, m: 5 }} variant="h3">
                     Our Partners

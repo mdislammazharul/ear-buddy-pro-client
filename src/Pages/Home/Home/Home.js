@@ -5,6 +5,8 @@ import Banner from '../Banner/Banner';
 import Partners from '../Partners/Partners';
 import ShowReviews from '../ShowReviews/ShowReviews';
 import TopSlider from '../TopSlider/TopSlider';
+import Footer from '../../Shared/Footer/Footer';
+import FAQ from '../FAQ/FAQ';
 
 const Home = () => {
     return (
@@ -15,6 +17,8 @@ const Home = () => {
             <Partners></Partners>
             <HomeServices />
             <ShowReviews></ShowReviews>
+            <FAQ></FAQ>
+            <Footer></Footer>
         </div>
     );
 };

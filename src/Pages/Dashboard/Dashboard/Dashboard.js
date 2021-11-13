@@ -1,5 +1,4 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -19,7 +18,6 @@ import {
 import { Button } from '@mui/material';
 import DashboardHome from '../DashboardHome/DashboardHome';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
-import AddDoctor from '../AddDoctor/AddDoctor';
 import useAuth from '../../../hooks/useAuth';
 import AdminRoute from '../../Login/AdminRoute/AdminRoute';
 import Pay from '../Pay/Pay';
@@ -101,7 +99,7 @@ function Dashboard(props) {
                     open={mobileOpen}
                     onClose={handleDrawerToggle}
                     ModalProps={{
-                        keepMounted: true, // Better open performance on mobile.
+                        keepMounted: true,
                     }}
                     sx={{
                         display: { xs: 'block', sm: 'none' },
@@ -139,9 +137,9 @@ function Dashboard(props) {
                     <Route exact path={`${path}/reviews`}>
                         <AddReviews></AddReviews>
                     </Route>
-                    <Route exact path={path}>
+                    {/* <Route exact path={path}>
                         <DashboardHome></DashboardHome>
-                    </Route>
+                    </Route> */}
                     <AdminRoute path={`${path}/makeAdmin`}>
                         <MakeAdmin></MakeAdmin>
                     </AdminRoute>
@@ -154,22 +152,10 @@ function Dashboard(props) {
                     <AdminRoute path={`${url}/manageProducts`}>
                         <ManageProducts></ManageProducts>
                     </AdminRoute>
-                    {/* have to add button & path on the upper portion of this file */}
-                    <AdminRoute path={`${path}/addDoctor`}>
-                        <AddDoctor></AddDoctor>
-                    </AdminRoute>
                 </Switch>
             </Box>
         </Box>
     );
 }
-
-Dashboard.propTypes = {
-    /**
-     * Injected by the documentation to work in an iframe.
-     * You won't need it on your project.
-     */
-    window: PropTypes.func,
-};
 
 export default Dashboard;

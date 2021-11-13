@@ -1,5 +1,4 @@
 import { Card, CardContent, Container, Grid, Rating, Typography } from '@mui/material';
-import { Box } from '@mui/system';
 import React, { useEffect, useState } from 'react';
 
 const ShowReviews = () => {
@@ -18,7 +17,7 @@ const ShowReviews = () => {
                 {
                     reviews.map(review => <Grid item xs={12} sm={6} md={4}>
                         <Card sx={{
-                            maxWidth: 345, mb: 5, height: '15vw'
+                            maxWidth: 345, mb: 2, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between'
                         }}>
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">

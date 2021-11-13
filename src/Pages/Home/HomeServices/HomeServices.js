@@ -1,7 +1,10 @@
-import { Card, Container, CardContent, CardMedia, Grid, Typography, CardActions } from '@mui/material';
+import { Card, Container, CardContent, CardMedia, Grid, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
+import { Spinner } from 'react-bootstrap';
+
+let spinner = true;
 
 const HomeServices = () => {
     const [services, setServices] = useState([])
@@ -10,10 +13,18 @@ const HomeServices = () => {
         fetch('http://localhost:5000/services')
             .then(res => res.json())
             .then(data => setServices(data));
-    }, []);
+        if (services) {
+            spinner = false;
+        }
+    }, [])
+
+    if (spinner) {
+        return <div className="d-flex justify-content-center my-3"><Spinner animation="border" variant="danger" /></div>
+    }
+
     const sliceServices = services.slice(0, 6);
     return (
-        <Container>
+        <Container id="homeServices">
             <Typography sx={{ fontWeight: 600, m: 5 }} variant="h3">
                 Available Products
             </Typography>

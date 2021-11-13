@@ -1,4 +1,5 @@
-import { Button, TextField, Alert } from '@mui/material';
+import { Button, TextField, Alert, Typography } from '@mui/material';
+import { Box } from '@mui/system';
 import React, { useState } from 'react';
 import useAuth from './../../../hooks/useAuth';
 
@@ -31,8 +32,10 @@ const MakeAdmin = () => {
         e.preventDefault()
     }
     return (
-        <div>
-            <h2>Make an Admin</h2>
+        <Box>
+            <Typography sx={{ fontWeight: 600, m: 5 }} variant="h3">
+                Make an Admin
+            </Typography>
             <form onSubmit={handleAdminSubmit}>
                 <TextField
                     sx={{ width: '50%' }}
@@ -43,7 +46,7 @@ const MakeAdmin = () => {
                 <Button type="submit" variant="contained">Make Admin</Button>
             </form>
             {success && <Alert severity="success">Made Admin successfully!</Alert>}
-        </div>
+        </Box>
     );
 };
 

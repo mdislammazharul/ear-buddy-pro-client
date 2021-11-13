@@ -41,7 +41,7 @@ const AddReviews = () => {
     }
     return (
         <div>
-            <Typography variant="h3" gutterBottom component="div">
+            <Typography sx={{ fontWeight: 600, m: 5 }} variant="h3">
                 Add Your Review
             </Typography>
             <form onSubmit={handleAddReview}>
@@ -87,7 +87,7 @@ const AddReviews = () => {
                         label="Rating (Numbers Only)"
                         inputRef={ratingRef}
                     />
-                    <Button type="submit" variant="contained">Add Product</Button>
+                    <Button type="submit" variant="contained">Add Review</Button>
                 </Box>
             </form>
         </div>

@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 // import * as React from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import { Button } from '@mui/material';
+import { Button, Typography } from '@mui/material';
 
 const AddProducts = () => {
     const idRef = useRef();
@@ -33,7 +33,7 @@ const AddProducts = () => {
                 .then(res => res.json())
                 .then(data => {
                     if (data.insertedId) {
-                        alert('Services added Successfully.')
+                        alert('Product added Successfully.')
                         e.target.reset();
                     }
                 })
@@ -45,8 +45,10 @@ const AddProducts = () => {
 
     }
     return (
-        <div>
-            <h1>Add a Product</h1>
+        <Box>
+            <Typography sx={{ fontWeight: 600, m: 5 }} variant="h3">
+                Add a Product
+            </Typography>
             <form onSubmit={handleAddReview}>
                 <Box
                     sx={{
@@ -123,7 +125,7 @@ const AddProducts = () => {
                     <Button type="submit" variant="contained">Add Product</Button>
                 </Box>
             </form >
-        </div >
+        </Box>
     );
 };
 

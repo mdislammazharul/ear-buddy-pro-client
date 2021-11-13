@@ -13,6 +13,8 @@ import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 import Purchase from './Pages/Services/Purchase/Purchase';
 import AllServices from './Pages/Services/AllServices/AllServices';
+import ContactUs from './Pages/Home/ContactUs/ContactUs';
+import NotFound from './Pages/Shared/NotFound/NotFound';
 
 function App() {
   return (
@@ -20,26 +22,32 @@ function App() {
       <AuthProvider>
         <Router>
           <Switch>
-            <PrivateRoute path="/services">
+            <Route exact path="/services">
               <AllServices></AllServices>
-            </PrivateRoute>
+            </Route>
             <PrivateRoute path="/dashboard">
               <Dashboard />
             </PrivateRoute>
-            <Route path="/home">
+            <Route exact path="/home">
               <Home />
             </Route>
             <PrivateRoute exact path="/purchase/:serviceId">
               <Purchase></Purchase>
             </PrivateRoute>
-            <Route path="/login">
+            <Route exact path="/login">
               <Login />
             </Route>
-            <Route path="/register">
+            <Route exact path="/register">
               <Register />
+            </Route>
+            <Route exact path="/contactUs">
+              <ContactUs></ContactUs>
             </Route>
             <Route exact path="/">
               <Home />
+            </Route>
+            <Route path="*">
+              <NotFound></NotFound>
             </Route>
           </Switch>
         </Router>
