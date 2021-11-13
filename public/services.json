@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "img": "https://i.ibb.co/bRMYTZF/SE-Master1.png",
+        "name": "SE-Master1",
+        "type": "Stereo",
+        "description": "Meticulous attention to even the finest detail was given to the production of the SE-MASTER1. Each unit is assembled by a master craftsman at the Tohoku Pioneer Plant in Japan; the birthplace of many iconic speaker models. We pour our advanced technological know-how into every step of the journey-from design to production and quality control- so your headphones deliver excellence without compromise.",
+        "price": "130"
+    },
+    {
+        "id": 2,
+        "img": "https://i.ibb.co/hW4zCNL/AKG-K361.png",
+        "name": "AKG-K361",
+        "type": "Wireless",
+        "description": "Make a telepathic connection to music with the SE-MONITOR5. As a fully-enclosed dynamic stereo headphone that provides an excellent listening environment, focus is placed on faithful reproduction of Hi-Res Audio formats. Yet Pioneer has voiced them to convey music’s emotional intent for a listening experience that moves mind and soul. Journey so your headphones deliver excellence without compromise.",
+        "price": "230"
+    },
+    {
+        "id": 3,
+        "img": "https://i.ibb.co/8bCPXMv/Austrian-Hi-X50.png",
+        "name": "Austrian-Hi-X50",
+        "type": "Bluetooth",
+        "description": "The Sony WH-1000XM4 headphones have it all. A lightweight design, comfort, the convenience of Bluetooth and arguably the best noise-cancelling currently on the market. Oh, and they sound fantastic too. It's no wonder we think they're the best headphones you can buy right now.They replace the WH-1000XM3 (below), which were fantastic headphones in their own right but the XM4s take performance to a whole new level. ",
+        "price": "150"
+    },
+    {
+        "id": 4,
+        "img": "https://i.ibb.co/YQtFrx4/Beyerdynamic-DT990-Pro.png",
+        "name": "Beyerdynamic-DT990-Pro",
+        "type": "Wireless",
+        "description": "Assuming you are a keen Apple user, the AirPods Max are the best wireless headphones you can buy – and not by a small margin. Their authenticity, detail, crispness and spaciousness elevate them so far above the previous best in the wireless noise-cancelling class that the comparison starts to become a little redundant and you instead begin to consider them alongside proper  modes with zero hi-fi products.",
+        "price": "120"
+    },
+    {
+        "id": 5,
+        "img": "https://i.ibb.co/NnPYqSX/Harmonic-Dyne.png",
+        "name": "Harmonic-Dyne",
+        "type": "Stereo",
+        "description": "With the new WF-1000XM4, Sony's managed to build on the huge success of the WF-1000XM3 (a few spots below) and produce a sensational pair of true wireless earbuds. There's dynamics and detail in spades and it's a balanced performance, with taut, precise bass notes and refined, sophisticated vocals. You can't help but be carried away by their sense of music headphones deliver excellence without compromise.",
+        "price": "180"
+    },
+    {
+        "id": 6,
+        "img": "https://i.ibb.co/Hr3wMcq/Hi-Fi-MAN-HE400se.png",
+        "name": "Hi-Fi-MAN-HE400se",
+        "type": "Bluetooth",
+        "description": "Specs are thorough, with noise-cancelling tech, an Ambient Mode, twin mics for voice calls, and battery life that totals 19.5 hours (6.5hrs from the buds and 13hrs from the charging case). A 15-minute USB-C quick-charge can deliver 70 minutes of playback. The touch controls on each bud are responsive and intuitive, allowing you to control your music and switch between noise-cancelling modes with zero fuss.",
+        "price": "110"
+    },
+    {
+        "id": 7,
+        "img": "https://i.ibb.co/T4mdcgY/SE-Monitor.png",
+        "name": "SE-Monitor",
+        "type": "Wireless",
+        "description": "Now only bettered for value by their successors (above), the Sony WH-1000XM3 cemented the brand's position as king of noise-cancelling headphones, beating rivals like the Bose QuietComfort 35 II and Bowers & Wilkins PX to the top spot when they came on the scene. Given the prestige of those brands, that's no mean feat. So how did these Sonys get there? For starters, they  modes with zero  offer a snug.",
+        "price": "160"
+    },
+    {
+        "id": 8,
+        "img": "https://i.ibb.co/QPGqPfM/Sennheiser-HD-560-S.png",
+        "name": "Sennheiser-HD-560-S",
+        "type": "Stereo",
+        "description": "Cambridge’s compact, fuss-free and affordable design in its original Melomania 1 true wireless earbuds (below) was a hit with us the first time around in 2019. The addition of a slicker paint-job, app support for EQ customisation and the step-up in sonic detail and refinement – without the anticipated price hike – only makes us want to heap extra praise upon the new Melomania 1 Plus.",
+        "price": "190"
+    },
+    {
+        "id": 9,
+        "img": "https://i.ibb.co/1nps39v/Shure-SRH840.png",
+        "name": "Shure-SRH840",
+        "type": "Stereo",
+        "description": "Only bettered for value by their successors above, these Sonys build on the original Sony WF-1000X (some of the first true wireless earbuds to get five stars from us), with a Bluetooth chip that sharpens up music synchronization and a noise-cancelling processor which Sony claims offers a 40 per cent improvement on its predecessor. Which is not to be sniffed at. It works. Even without music playing.",
+        "price": "100"
+    },
+    {
+        "id": 10,
+        "img": "https://i.ibb.co/xqx6tJC/V-Moda-M-200.png",
+        "name": "V-Moda-M-200",
+        "type": "Wireless",
+        "description": "Given everyone’s apparent obsession with wireless headphones, you’d be forgiven for thinking the days of wired headphones were numbered, especially at the more affordable end of the market.But, we’d be surprised if those thoughts ever surfaced in the corridors of Austrian Audio’s Vienna HQ. The company, born out of ex-AKG employees, has hit the ground running with its range of wired headphones, Hi-X. ",
+        "price": "160"
+    }
+]
