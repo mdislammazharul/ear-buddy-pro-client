@@ -7,7 +7,7 @@ let spinner = true;
 const FAQ = () => {
     const [services, setServices] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/faq')
+        fetch('https://fast-island-52786.herokuapp.com/faq')
             .then(res => res.json())
             .then(data => setServices(data));
         if (services) {

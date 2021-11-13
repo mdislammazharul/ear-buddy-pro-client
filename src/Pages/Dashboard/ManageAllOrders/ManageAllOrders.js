@@ -10,7 +10,7 @@ const ManageAllOrders = () => {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://fast-island-52786.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setUsers(data))
         if (users) {
@@ -27,7 +27,7 @@ const ManageAllOrders = () => {
         const proceed = window.confirm('Are you sure you want to delete?');
 
         if (proceed) {
-            const url = `http://localhost:5000/orders/${id}`
+            const url = `https://fast-island-52786.herokuapp.com/orders/${id}`
             console.log(url);
             fetch(url, {
                 method: 'DELETE'
@@ -43,6 +43,7 @@ const ManageAllOrders = () => {
                 });
         }
     }
+
     return (
         <Box>
             <Typography sx={{ fontWeight: 600, m: 5 }} variant="h3">
@@ -74,7 +75,8 @@ const ManageAllOrders = () => {
                                 <Typography sx={{ mt: 2 }} variant="h7" component="div">
                                     Email: {item.userEmail}
                                 </Typography>
-                                <Button sx={{ mt: 2 }} type="submit" variant="contained" onClick={() => handleDeleteOrder(item._id)}>Delete Order</Button>
+                                <Button sx={{ mt: 2, me: 2 }} type="submit" variant="contained" onClick={() => handleDeleteOrder(item._id)}>Delete Order</Button>
+                                <br />
                             </CardContent>
                         </Card>
                     </Grid>)

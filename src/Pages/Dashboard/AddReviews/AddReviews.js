@@ -18,7 +18,7 @@ const AddReviews = () => {
 
         if (productName !== "" && description !== "" && rating !== "") {
             const newReview = { userName, productName, description, rating };
-            fetch('http://localhost:5000/reviews', {
+            fetch('https://fast-island-52786.herokuapp.com/reviews', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

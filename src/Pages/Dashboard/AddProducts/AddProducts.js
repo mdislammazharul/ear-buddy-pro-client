@@ -23,7 +23,7 @@ const AddProducts = () => {
 
         if (id !== "null" && name !== "" && type !== "" && description !== "" && price !== "" && img !== "") {
             const newServices = { id, img, name, type, description, price };
-            fetch('http://localhost:5000/services', {
+            fetch('https://fast-island-52786.herokuapp.com/services', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

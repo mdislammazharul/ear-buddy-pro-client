@@ -9,7 +9,7 @@ const ManageProducts = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://fast-island-52786.herokuapp.com/services')
             .then(res => res.json())
             .then(data => setServices(data))
         if (services) {
@@ -26,7 +26,7 @@ const ManageProducts = () => {
         const proceed = window.confirm('Are you sure you want to delete?');
 
         if (proceed) {
-            const url = `http://localhost:5000/services/${id}`
+            const url = `https://fast-island-52786.herokuapp.com/services/${id}`
             console.log(url);
             fetch(url, {
                 method: 'DELETE'

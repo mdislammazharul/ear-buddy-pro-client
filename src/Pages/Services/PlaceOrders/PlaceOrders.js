@@ -19,7 +19,7 @@ const PlaceOrders = (props) => {
         const quantity = quantityRef.current.value;
 
         const newUser = { id, img, name, type, description, price, address, quantity, userEmail, userName };
-        fetch('http://localhost:5000/orders', {
+        fetch('https://fast-island-52786.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

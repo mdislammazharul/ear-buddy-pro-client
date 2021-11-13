@@ -9,7 +9,7 @@ let spinner = true;
 const Services = ({ date }) => {
     const [services, setServices] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://fast-island-52786.herokuapp.com/services')
             .then(res => res.json())
             .then(data => setServices(data));
         if (services) {
